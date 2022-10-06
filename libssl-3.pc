@@ -1,0 +1,11 @@
+prefix=/usr/local/x86_64-pc-linux-gnu/x86_64-pc-linux-gnu/sys-root/usr
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib/openssl-3
+includedir=${prefix}/include/openssl-3
+
+Name: OpenSSL-libssl-3
+Description: Secure Sockets Layer and cryptography libraries
+Version: 3.0.5
+Requires.private: libcrypto-3
+Libs: -L${libdir} -lssl
+Cflags: -I${includedir}

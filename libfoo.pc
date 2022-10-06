@@ -1,0 +1,12 @@
+prefix=/usr/local/x86_64-pc-linux-gnu/x86_64-pc-linux-gnu/sys-root/usr
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=/usr/local/include
+
+Name: libfoo
+Description: libfoo
+Version: 1.0
+Requires.internal: openssl-3
+Libs: -L${libdir} -lfoo
+Libs.private: -lgcrypt -lboost_filesystem -lboost_system -lstdc++
+Cflags: -I${includedir}
